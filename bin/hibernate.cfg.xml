@@ -25,6 +25,6 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 
-        <mapping resource="com/steel/entity/Worker.hbm.xml"/>
+        <mapping resource="com/steel/entity/Cat.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

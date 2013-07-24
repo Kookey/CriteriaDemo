@@ -6,13 +6,14 @@
 
 <hibernate-mapping package="com.steel.entity">
 
-    <class name="Worker" table="worker">
+    <class name="Cat" table="cat">
         <id name="id" type="integer" column="id">
             <generator class="increment"/>
         </id>
-        <property name="firstName" type="string" column="first_name"/>
-        <property name="lastName" type="string" column="last_name"/>
-        <property name="salary" type="integer" column="salary"/>
+        <property name="name" type="string" column="name"/>
+        <property name="color" type="string" column="color"/>
+        <property name="size" type="string" column="size"/>
+        <property name="age" type="integer" column="age"/>
     </class>
 
 </hibernate-mapping>
