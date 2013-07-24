@@ -18,7 +18,10 @@ public class HibernateUtil {
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public static final ThreadLocal session = new ThreadLocal();
+	
+	@SuppressWarnings("unchecked")
 	public static Session currentSession() {
 		Session sess = (Session) session.get();
 		if(sess==null){
@@ -28,6 +31,7 @@ public class HibernateUtil {
 		return sess;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static void closeSession(){
 		Session s = (Session) session.get();
 		if(s!=null)

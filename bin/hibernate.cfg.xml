@@ -26,5 +26,7 @@
         <property name="show_sql">true</property>
 
         <mapping resource="com/steel/entity/Cat.hbm.xml"/>
+        <mapping resource="com/steel/entity/Person.hbm.xml"/>
+        <mapping resource="com/steel/entity/Address.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

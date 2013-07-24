@@ -15,5 +15,4 @@
         <property name="size" type="string" column="size"/>
         <property name="age" type="integer" column="age"/>
     </class>
-
 </hibernate-mapping>
