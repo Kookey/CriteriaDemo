@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.steel.entity">
+    <class name="Book" table="book">
+        <id name="bId" type="string" unsaved-value="null">
+           <column name="b_id" sql-type="varchar(50)" not-null="true"></column>
+           <generator class="uuid.hex"></generator>
+        </id>
+        <property name="bName">
+            <column name="b_name" sql-type="varchar(100)" not-null="true"></column>
+        </property>
+        <property name="bPrice">
+            <column name="b_price" sql-type="varchar(50)" not-null="true"></column>
+        </property>
+    </class>
+</hibernate-mapping>

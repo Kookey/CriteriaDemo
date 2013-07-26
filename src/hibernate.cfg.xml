@@ -28,5 +28,9 @@
         <mapping resource="com/steel/entity/Cat.hbm.xml"/>
         <mapping resource="com/steel/entity/Person.hbm.xml"/>
         <mapping resource="com/steel/entity/Address.hbm.xml"/>
+        <mapping resource="com/steel/entity/UserInfo.hbm.xml"/>
+        <mapping resource="com/steel/entity/Room.hbm.xml"/>
+        <mapping resource="com/steel/entity/Student.hbm.xml"/>
+        <mapping resource="com/steel/entity/Book.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

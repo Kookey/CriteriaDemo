@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   <hibernate-mapping package="com.steel.entity">
+       <class name="UserInfo" table="userInfo">
+           <id name="userId" column="userId" type="java.lang.Long">
+               <generator class="assigned"></generator>
+           </id>
+           <property name="name" column="name" type="java.lang.String"></property>
+           <many-to-one name="room" column="roomId" class="Room" cascade="all" unique="true"/>
+       </class>
+   </hibernate-mapping>
