@@ -32,5 +32,7 @@
         <mapping resource="com/steel/entity/Room.hbm.xml"/>
         <mapping resource="com/steel/entity/Student.hbm.xml"/>
         <mapping resource="com/steel/entity/Book.hbm.xml"/>
+        <mapping resource="com/steel/entity/User.hbm.xml"/>
+        <mapping resource="com/steel/entity/Dormitory.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

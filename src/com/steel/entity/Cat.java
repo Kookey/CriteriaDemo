@@ -1,6 +1,8 @@
 package com.steel.entity;
 
-public class Cat {
+import java.io.Serializable;
+
+public class Cat implements Serializable{
 
 	private int id;
 	private String name;

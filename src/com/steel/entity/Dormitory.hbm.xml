@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   <hibernate-mapping package="com.steel.entity">
+       <class name="Dormitory" table="dormitory">
+           <id name="dId" column="id">
+               <generator class="native"></generator>
+           </id>
+           <property name="address" column="address" type="java.lang.String"></property>
+       </class>
+   </hibernate-mapping>
