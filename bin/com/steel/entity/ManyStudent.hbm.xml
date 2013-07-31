@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+   <hibernate-mapping package="com.steel.entity">
+       <class name="ManyStudent" table="many_student">
+           <id name="sid" type="string" unsaved-value="null">
+               <column name="sid" sql-type="char(32)" not-null="true"/>
+               <generator class="uuid.hex"></generator>
+           </id>
+           <property name="sname" type="string">
+               <column name="sname" sql-type="varchar(16)" not-null="true"></column>
+           </property>
+           <property name="sage" type="string">
+               <column name="sage" sql-type="varchar(16)" not-null="true" ></column>
+           </property>
+           <set name="manyCourse" table="student_course_link" cascade="all" outer-join="false">
+               <key column="sid"></key>
+               <many-to-many class="ManyCourse" column="cid"></many-to-many>
+           </set>
+       </class>
+   </hibernate-mapping>

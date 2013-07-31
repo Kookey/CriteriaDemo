@@ -31,7 +31,7 @@ public class OneToManyTest {
 		
 		student.setsName("小强");
 		student.setsAge("23");
-		Set bookSet = new HashSet();
+		Set<Book> bookSet = new HashSet<Book>();
 		Book book = null;
 		
 		for(int i=0;i<4;i++){
@@ -47,6 +47,7 @@ public class OneToManyTest {
 		HibernateUtil.closeSession();
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void QueryStudent(){
 		Session session = HibernateUtil.currentSession();
@@ -63,8 +64,8 @@ public class OneToManyTest {
 		for(int i=0;i<slist.size();i++){
 			s = slist.get(i);
 			System.out.println("学生姓名:"+s.getsName()+";年龄"+s.getsAge());
-			Set book = s.getBook();
-			Iterator it = book.iterator();
+			Set<?> book = s.getBook();
+			Iterator<?> it = book.iterator();
 			
 			while(it.hasNext()){
 				b = (Book) it.next();

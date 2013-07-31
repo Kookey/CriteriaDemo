@@ -17,9 +17,6 @@ public class ManyToOneTest {
 		Dormitory dorm1 = new Dormitory();
 		dorm1.setAddress("3F004");
 		
-		Dormitory dorm2 = new Dormitory();
-		dorm1.setAddress("4F004");
-		
 		User user1 = new User();
 		user1.setName("小红");
 		user1.setDorm(dorm1);
@@ -40,6 +37,7 @@ public class ManyToOneTest {
 	
 	@Test
 	public void loadUser(){
+		
 		Session session = HibernateUtil.currentSession();
 		Transaction tc = session.beginTransaction();
 		
@@ -48,7 +46,6 @@ public class ManyToOneTest {
 		if(user != null){
 			System.out.println("姓名:"+user.getName()+";宿舍:"+user.getDorm().getAddress());
 		}
-		
 		tc.commit();
 		HibernateUtil.closeSession();
 	}
